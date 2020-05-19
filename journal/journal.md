@@ -95,6 +95,7 @@ Self opening blinds use a photoresistor placed outside the window that measures 
 
 ### Final design concept ###
 <!--- This should be a description of your concept including its context, motivation, or other relevant information you used to decide on this concept. --->
+The final design concept is a simple alarm which is light sensitive and activated when light drops below a specified level. The concept is based on the tendancy to be distracted by things to the point where the user doesn't realise what time of day it is. Generally people who are invested in computer based work or video games play past a point of sundown, when there are usually responsibilites that need to be completed at this time. Rather than a standard alarm clock, it is based as a novelty that would interest people that are usually interested in technology and video games, especially the science fiction world. It uses visual and audio features to alert the user of the ambient light levels. These features include blinking lights, body movement of the robot, and buzzing which could in future be translated to actual sounds through the use of a speaker rather than a buzzer. Because the robot is designed to be 'scared of the dark' it gives a personality to it and allows the user to connect. This provides a sense of companionship especially in current isolation. In future iterations speech could be added to further personify the device.
 
 ### Interaction flowchart ###
 <!--- Include an interaction flowchart of the interaction process in your project. Make sure you think about all the stages of interaction step-by-step. Also make sure that you consider actions a user might take that aren't what you intend in an ideal use case. Insert an image of it below. It might just be a photo of a hand-drawn sketch, not a carefully drawn digital diagram. It just needs to be legible. --->
@@ -109,6 +110,50 @@ This should have quite a lot of information! It will likely include most of the 
 Use subheadings to structure this information. See https://guides.github.com/features/mastering-markdown/ for details of how to insert subheadings.
 
 There will likely by a dozen or so images of the project under construction. The images should help explain why you've made the choices you've made as well as what you have done. --->
+
+I've never been good at making things with my hands, which is why this project posed a difficult challenge to me. In the beginning prototyping stage I focused mostly on the fundamentals of the interaction by building smaller circuits and testing their ability to work.
+
+The below code takes input from the LDR and compares it to a defined value (that will later be adjustable). If the room is too dark the tone is played and a motor spins. This gives proof of concept for further integration of movement in parts such as the continuous tracks. It also adds the ability to acknowledge the tone and make the device wait a predefined amount of time before it continues detecting light levels.  
+
+```javascript
+let light = 0;
+let lightValue = 500;
+pins.analogSetPitchPin(AnalogPin.P2)
+
+basic.forever(function () {
+    checkLight();
+    if (input.buttonIsPressed(Button.A)) {
+        pins.digitalWritePin(DigitalPin.P0, 0);
+        basic.pause(60000);
+    }
+})
+
+function checkLight() {
+    light = pins.analogReadPin(AnalogPin.P1)
+
+    if (light < lightValue) {
+        music.playTone(1200, 1000);
+        pins.digitalWritePin(DigitalPin.P0, 1)
+    } else {
+        pins.digitalWritePin(DigitalPin.P0, 0)
+        return;
+    }
+}
+```
+
+![lightMotorScream](images/lightmotorscream.jpg)
+
+
+This is an earlier version of this iteration where just the piezo buzzer is implemented. It used similar code, excluding the ability to wait.
+
+![LightBuzzer](images/lightscream.jpg)
+
+Combining all iterations of this will bring the project closer to its full functionality, but to further refine it more commands will be separated into functions so that its more optimized and readable.
+
+After getting these components to work properly I went to work on the physical body of the device. Due to limited resources and funds, I used household items such as cardboard to cosntruct the frame work. These were put together and painted black with some details to add aesthetic to the project. 
+
+Initially, wheels were meant to be implemented into the design of the product but through experimentation, technical issues and time limitations, they were removed from the product.
+
 
 ## Final code ##
 
@@ -136,10 +181,6 @@ function checkLight() {
     }
 }
 ```
-
-## Design process discussion ##
-<!--- Discuss your process used in this project, particularly with reference to aspects of the Double Diamond design methodology or other relevant design process. --->
-
 
 ## Reflection ##
 
