@@ -26,6 +26,7 @@
 
 ### Design intent ###
 <!--- Include your design intent here. It should be about a 10 word phrase/sentence. --->
+An interesting device that uses light detection to alert the user when it gets dark.
 
 ### Design ideation ###
 <!--- Document your ideation process. This will include the design concepts presented for assessment 2. You can copy and paste that information here. --->
@@ -50,6 +51,29 @@ There will likely by a dozen or so images of the project under construction. The
 ## Final code ##
 
 <!--- Include here screenshots of the final code you used in the project if it is done with block coding. If you have used javascript, micropython, C, or other code, include it as text formatted as code using a series of three backticks ` before and after the code block. See https://guides.github.com/features/mastering-markdown/ for more information about that formatting. --->
+
+```javascript
+let light = 0;
+let lightThreshold = 20;
+pins.analogSetPitchPin(AnalogPin.P2);
+
+basic.forever(function () {
+    checkLight();
+})
+
+function checkLight() {
+    light = pins.analogReadPin(AnalogPin.P1)
+    //if light level too dark play tone and turn LED on
+    if (light < lightThreshold) {
+        pins.digitalWritePin(DigitalPin.P0, 1);
+        music.playTone(1200, 1000);
+    } else {
+        //otherwise turn led off
+        pins.digitalWritePin(DigitalPin.P0, 0);
+        return;
+    }
+}
+```
 
 ## Design process discussion ##
 <!--- Discuss your process used in this project, particularly with reference to aspects of the Double Diamond design methodology or other relevant design process. --->
