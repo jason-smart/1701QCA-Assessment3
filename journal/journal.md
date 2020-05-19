@@ -152,7 +152,7 @@ Combining all iterations of this will bring the project closer to its full funct
 
 After getting these components to work properly I went to work on the physical body of the device. Due to limited resources and funds, I used household items such as cardboard to cosntruct the frame work. These were put together and painted black with some details to add aesthetic to the project. 
 
-[Circuit](images/Circuits.jpg)
+![Circuit](images/Circuits.jpg)
 
 Initially, wheels were meant to be implemented into the design of the product but through experimentation, technical issues and time limitations, they were removed from the product.
 
