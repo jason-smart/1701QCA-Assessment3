@@ -18,9 +18,66 @@
 <!--- Include information about why this project is related to yours. --->
 
 <!--- Repeat code above for a total of 6 related projects --->
+### Related project 1 ###
+Butter Passing Robot
+
+![ButterPassingRobot](http://img.youtube.com/vi/TZbxWvc9O6M/0.jpg)
+
+[Butter Passing Robot](http://www.youtube.com/watch?v=TZbxWvc9O6M)
+
+This project is related to mine in its aesthetic and idea. The square shape, basic colour, and overcomplication of a simple task are very similar to my project.
+
+### Related project 2 ###
+
+![Buzzer](images/buzzer.jpg)
+
+[Microbit: Using a buzzer](https://learn.sparkfun.com/tutorials/sparkfun-inventors-kit-for-microbit-experiment-guide/experiment-9-using-a-buzzer)
+
+This project is related to mine because it also uses a buzzer to make simple sounds and melodies. I can use the circuit diagrams to assist the design of my buzzer integration.
+
+### Related project 3 ###
+[Digital Watch](https://makecode.microbit.org/projects/watch/digital-watch)
+
+```javascript
+  let minutes = 0;
+  basic.forever(() => {
+      basic.pause(60000)
+      if (minutes < 59) {
+          minutes += 1;
+      } else {
+          minutes = 0;
+      }
+  })
+```
+
+This project is related to mine in its code execution. The project shown is to become a watch but I can utilize the time counting to play melodies at hour intervals. Because it is created on the microbit, I can sample the code and change it to suit my needs and it should fit perfectly.
+
+
+### Related project 4 ###
+
+![LightFacer](images/lightfacer.jpg)
+
+
+[A Simple Light Follower](https://www.hackster.io/a-guadalupi/a-simple-light-follower-ad3388)
+
+This project is related to mine in its because it also uses a photoresistor to detect light levels.
+
+### Related project 5 ###
+
+![Sunflower](images/sunflower.jpg)
+
+
+[Valentine's Sunflower](https://www.hackster.io/circuito-io-team/valentine-s-sunflower-3cdd90)
+
+This project is related to mine in its because it also uses a photoresistor to detect light levels.
+
 
 ## Other research ##
 <!--- Include here any other relevant research you have done. This might include identifying readings, tutorials, videos, technical documents, or other resources that have been helpful. For each particular source, add a comment or two about why it is relevant or what you have taken from it. You should include a reference or link to each of these resources. --->
+
+I used the course reading "Prototyping Interactive Objects" by Scott Sullivan to identify the need for low level working code rather than complex, redundance free, production level code. Small prototypes of projects use simple code that outlines the functionality of the final product, made to be rewritten later. This allowed me to focus less of my time on writing the code and more on the documentation and construction of the project.
+
+"Designers need to learn to code. They do not need to learn how to write production-level .NET web applications that are going to be pushed out to servers and used by millions of people. The type of coding that I’m referring to is a sketching medium that comes from a place of exploration, and it has very little to do with final implementation. This type of design coding is quick and dirty, relies heavily on frameworks, and is more about proof of concept than actually building a product that can scale up and be extended when needed." (Scott Sullivan, Prototyping Interactive Objects)
 
 ## Conceptual development ##
 
