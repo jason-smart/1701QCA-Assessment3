@@ -1,4 +1,4 @@
-# 1701QCA Final project journal: *Insert your name here*
+# 1701QCA Final project journal: *Jason Smart*
 
 <!--- As for other assessments, fill out the following journal sections with information relevant to your project. --->
 
@@ -75,6 +75,23 @@ An interesting device that uses light detection to alert the user when it gets d
 
 ### Design ideation ###
 <!--- Document your ideation process. This will include the design concepts presented for assessment 2. You can copy and paste that information here. --->
+#### Design intent ####
+*An interesting device that uses light detection for both functionality use and novelty.*
+
+![concept](images/concept.png)
+A quick 3D model of SID for conceptual design.
+
+#### Design concept 1 ####
+##### Automatic Fan Speed #####
+The automatic fan speed device senses ambient room temperature to control the speed of the room's main fan. This keeps a controlled temperature environment within the room and increases circulation based on temperature.
+![Auto_Fan](images/autofan.jpg)
+
+#### Design concept 2 ####
+##### Self Opening Blinds #####
+Self opening blinds use a photoresistor placed outside the window that measures the light level outside. Once the light level reaches a certain threshold a motor is run to open the blinds to allow sufficient light in. The device could also use an internal photoresistor in conjunction with the external one to make sure the room is well lit enough from the inside. 
+
+![Auto_Blinds](images/autoblinds.jpg)
+
 
 ### Final design concept ###
 <!--- This should be a description of your concept including its context, motivation, or other relevant information you used to decide on this concept. --->
